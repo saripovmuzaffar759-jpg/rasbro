@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "My Boards Tab",
+  "version": "0.1.0",
+  "description": "Новая вкладка с досками для ссылок и закладок",
+  "permissions": ["tabs", "storage", "bookmarks", "commands"],
+  "host_permissions": ["<all_urls>"],
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "save-current-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "Сохранить текущую вкладку"
+    }
+  },
+  "icons": {
+    "128": "icons/128.png"
+  }
+}
